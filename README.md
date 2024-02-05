@@ -4,3 +4,5 @@
 - React
 - TypeScript
 - Chakura UI
+- eslint-config-airbnb
+- prettier
