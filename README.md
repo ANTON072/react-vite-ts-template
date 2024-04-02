@@ -3,5 +3,7 @@
 - Vite
 - React
 - TypeScript
-- eslint-config-airbnb
 - prettier
+- React Router
+- TanStack Query
+- Tailwind CSS
