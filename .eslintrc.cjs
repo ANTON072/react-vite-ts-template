@@ -1,8 +1,14 @@
 module.exports = {
-  extends: ["airbnb", "airbnb-typescript", "prettier"],
-  parserOptions: {
-    project: "./tsconfig.json",
-  },
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+  ],
+  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["react-refresh", "eslint-plugin-import"],
   settings: {
     // エイリアスの設定
     "import/resolver": {
@@ -16,6 +22,11 @@ module.exports = {
     },
   },
   rules: {
+    // tsxファイルがコンポーネントとhooksのみをexportできるようにする
+    "react-refresh/only-export-components": [
+      "warn",
+      { allowConstantExport: true },
+    ],
     // インポート順序
     "import/order": [
       "error",
