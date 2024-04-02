@@ -1,5 +1,9 @@
+import { RouterProvider } from "react-router-dom";
+
+import router from "./router";
+
 const App = () => {
-  return <div className="container mx-auto">Hello World.</div>;
+  return <RouterProvider router={router} />;
 };
 
 export default App;
